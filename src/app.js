@@ -75,7 +75,7 @@ app.post("/repositories/:id/like", (request, response) => {
   const project = repositories.find((el) => el.id === id);
   project.likes = project.likes + 1;
 
-  response.status(200).json(project);
+  response.status(201).json(project);
 });
 
 module.exports = app;
